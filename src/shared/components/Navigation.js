@@ -1,14 +1,15 @@
 import 'bootstrap/dist/css/bootstrap.min.css';  
 import {Nav, Navbar, Container, NavDropdown} from 'react-bootstrap';  
 
-function App() {  
+function Navigation() {  
   return (  
     <Navbar bg="" expand="md">  
     <Container>  
       <Navbar.Brand href="/Home">Intelligent Cart</Navbar.Brand>  
       <Navbar.Toggle aria-controls="basic-navbar-nav" />  
       <Navbar.Collapse id="basic-navbar-nav">  
-        <Nav className="me-auto">    
+        <Nav className="me-auto">   
+          <Nav.Link href="/Product">Product</Nav.Link> 
           <Nav.Link href="/Navbar">Search</Nav.Link>
           <Nav.Link href="/WishList">Wishlist</Nav.Link>  
           <NavDropdown title="Profile" id="basic-nav-dropdown">  
@@ -24,4 +25,4 @@ function App() {
   </Navbar>  
   );  
 }  
-export default App;  
+export default Navigation;  

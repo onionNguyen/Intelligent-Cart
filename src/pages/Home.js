@@ -1,12 +1,14 @@
 import React from "react";
 
-import Navbar from "../shared/components/Navbar.js";
+import Product from "/Users/nhatnguyen/intelligent-cart/src/components/Product.js";
+import Navigation from "../shared/components/Navigation.js";
 
 
 const Home = () => {
   return (
     <div>
-      <Navbar/>
+      <Navigation/>
+      <Product/>
       <h1>Bootstrap</h1>
       <button type="button" class="btn btn-success">
         Success

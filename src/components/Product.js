@@ -1,4 +1,8 @@
 import React from "react";
-import Navbar from "../shared/components/Navbar.js";
+import Navigation from "../shared/components/Navigation.js";
 
-export default App
+const Product = () => {
+    return;
+  };
+
+export default Product;
