@@ -1,11 +1,9 @@
-import './App.css';
+import "./App.css";
 
 function App() {
-  return (
-    <div>
-      
-    </div>
-  );
+  return <div>
+    dasdad dadasd
+  </div>;
 }
 
 export default App;
