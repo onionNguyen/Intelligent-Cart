@@ -1,9 +1,12 @@
+import { Fragment } from "react";
 import "./App.css";
 
 function App() {
-  return <div>
-    dasdad dadasd
-  </div>;
+  return (
+    <Fragment>
+      <p>hello</p>
+    </Fragment>
+  );
 }
 
 export default App;
