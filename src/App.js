@@ -1,10 +1,12 @@
 import React from "react";
 import { Route } from "react-router";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Home from "./pages/Home";
+
 
 const App = () => {
   return (
-      <Route exact path="/">
-      </Route>
+        <Home/>
   );
 
 
