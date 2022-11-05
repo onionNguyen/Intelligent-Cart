@@ -1,12 +1,11 @@
 import React from "react";
+import Carousel from "../components/carousel.js"
 
 const Home = () => {
   return (
     <div>
       <h1>Bootstrap</h1>
-      <button type="button" class="btn btn-success">
-        Success
-      </button>
+      <Carousel/>
     </div>
   );
 };
