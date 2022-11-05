@@ -1,12 +1,13 @@
-import { Fragment } from "react";
-import "./App.css";
+import React from "react";
+import { Route } from "react-router";
 
-function App() {
+const App = () => {
   return (
-    <Fragment>
-      <p>hello</p>
-    </Fragment>
+      <Route exact path="/">
+      </Route>
   );
-}
+
+
+};
 
 export default App;
