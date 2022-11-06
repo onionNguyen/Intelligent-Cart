@@ -1,7 +1,7 @@
 import React from "react";
 import Carousel from "../components/carousel.js"
 
-import Product from "/Users/nhatnguyen/intelligent-cart/src/components/Product.js";
+import Product from "../components/Product.js";
 import Navigation from "../shared/components/Navigation.js";
 
 
