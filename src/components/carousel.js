@@ -1,5 +1,5 @@
 import Carousel from "react-bootstrap/Carousel";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 import "../components/carousel.css"
 
 //Carousel component to generate carosel on home page

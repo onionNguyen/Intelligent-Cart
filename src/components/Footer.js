@@ -16,10 +16,10 @@ const Footer = () => (
 
             <div className="col-md mb-">
               <span>
-                <img class="p-3" src="./Facebook Icon.png" />
-                <img class="p-3" src="./GitHub Icon.png" />
-                <img class="p-3" src="./Instagram Icon.png" />
-                <img class="p-3" src="./Twitter Icon.png" />
+                <img class="p-3" src="./Facebook Icon.png" alt="Facebook Icon" />
+                <img class="p-3" src="./GitHub Icon.png" alt="GitHub Icon" />
+                <img class="p-3" src="./Instagram Icon.png" alt="Instagram Icon" />
+                <img class="p-3" src="./Twitter Icon.png" alt="Twitter Icon" />
               </span>
             </div>
           </div>
