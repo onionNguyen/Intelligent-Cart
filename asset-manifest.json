@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/intelligentcart/static/css/main.fe1bf660.css",
+    "main.js": "/intelligentcart/static/js/main.4c09fd72.js",
+    "index.html": "/intelligentcart/index.html",
+    "main.fe1bf660.css.map": "/intelligentcart/static/css/main.fe1bf660.css.map",
+    "main.4c09fd72.js.map": "/intelligentcart/static/js/main.4c09fd72.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fe1bf660.css",
+    "static/js/main.4c09fd72.js"
+  ]
+}
