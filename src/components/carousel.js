@@ -1,10 +1,12 @@
 import Carousel from "react-bootstrap/Carousel";
 import { Link } from "react-router-dom";
 import "../components/carousel.css"
+
+//Carousel component to generate carosel on home page
 function UncontrolledExample() {
   return (
-    <div class="row">
-      <div class="col-md-8 mx-auto bg-light">
+    <div class="row p-3">
+      <div class="col-md-8 mx-auto bg-dark">
         <Carousel>
           <Carousel.Item>
               <img 
