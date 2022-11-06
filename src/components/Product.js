@@ -1,7 +1,7 @@
 import React from "react";
 //import Navigation from "../shared/components/Navigation.js";
 
-const Product = () => {
+const Product = () => { //create constant Product
     return (
       //basic layout. For project 5 will have actual products displayed
       <React.Fragment>

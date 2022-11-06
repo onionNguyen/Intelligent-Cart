@@ -1,4 +1,4 @@
-.carousel-item,
+.carousel-item, /* set height for carousel product photos */
 .carousel-item img {
     max-height: 50vh;
 }

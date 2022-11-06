@@ -1,8 +1,10 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 
-const Footer = () => (
-  <div>
+const Footer = () => ( //create constant Footer
+
+//Footer layout
+  <div> 
     <Container class="bg-light">
       <footer className="page-footer font-small pt-5">
         <div className="container-fluid text-center text-md-left">
@@ -25,7 +27,7 @@ const Footer = () => (
           </div>
         </div>
         <div className="footer-copyright text-center py-3">
-          © 2020 Copyright:
+          © 2022 Copyright:
           <span>Intelligent Cart</span>
         </div>
       </footer>

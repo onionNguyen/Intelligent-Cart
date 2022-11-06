@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';  
 import {Nav, Navbar, Container, NavDropdown} from 'react-bootstrap';  
 
-function Navigation() {  
+function Navigation() {  //add navigation bar on header using Bootstrap 
   return (
     <div class="bg-secondary">
       <Navbar bg="" expand="md">
