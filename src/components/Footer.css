@@ -1,0 +1,13 @@
+footer {
+    position: absolute;
+    top: 760px;
+    left: 116px;
+    width: 317px;
+    background: #161619;
+    border-radius: 0px 0px 10px 10px;
+}
+
+footer>span {
+    display: flex;
+    justify-content: space-between;
+}
