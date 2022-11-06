@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/intelligentcart/static/css/main.fe1bf660.css",
-    "main.js": "/intelligentcart/static/js/main.57f4e65a.js",
+    "main.js": "/intelligentcart/static/js/main.20dffdc2.js",
     "index.html": "/intelligentcart/index.html",
     "main.fe1bf660.css.map": "/intelligentcart/static/css/main.fe1bf660.css.map",
-    "main.57f4e65a.js.map": "/intelligentcart/static/js/main.57f4e65a.js.map"
+    "main.20dffdc2.js.map": "/intelligentcart/static/js/main.20dffdc2.js.map"
   },
   "entrypoints": [
     "static/css/main.fe1bf660.css",
-    "static/js/main.57f4e65a.js"
+    "static/js/main.20dffdc2.js"
   ]
 }
