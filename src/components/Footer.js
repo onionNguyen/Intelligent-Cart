@@ -1,8 +1,10 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 
-const Footer = () => (
-  <div>
+const Footer = () => ( //create constant Footer
+
+//Footer layout
+  <div> 
     <Container class="bg-light">
       <footer className="page-footer font-small pt-5">
         <div className="container-fluid text-center text-md-left">
@@ -14,18 +16,18 @@ const Footer = () => (
 
             <hr className="clearfix w-100 d-md-none pb-0" />
 
-            <div className="col-md mb-">
+            <div className="col-md mb-3">
               <span>
-                <img class="p-3" src="./Facebook Icon.png" />
-                <img class="p-3" src="./GitHub Icon.png" />
-                <img class="p-3" src="./Instagram Icon.png" />
-                <img class="p-3" src="./Twitter Icon.png" />
+                <img class="p-3" src="./Facebook Icon.png" alt="Facebook Icon" />
+                <img class="p-3" src="./GitHub Icon.png" alt="GitHub Icon" />
+                <img class="p-3" src="./Instagram Icon.png" alt="Instagram Icon" />
+                <img class="p-3" src="./Twitter Icon.png" alt="Twitter Icon" />
               </span>
             </div>
           </div>
         </div>
         <div className="footer-copyright text-center py-3">
-          © 2020 Copyright:
+          © 2022 Copyright:
           <span>Intelligent Cart</span>
         </div>
       </footer>

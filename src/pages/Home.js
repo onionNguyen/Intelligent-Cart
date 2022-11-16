@@ -5,7 +5,7 @@ import Product from "../components/Product.js";
 import Navigation from "../shared/components/Navigation.js";
 
 
-const Home = () => {
+const Home = () => {  //create constant Home, add different Route
   return (
     <div>
       <Navigation />

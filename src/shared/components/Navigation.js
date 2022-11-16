@@ -1,13 +1,13 @@
 import 'bootstrap/dist/css/bootstrap.min.css';  
 import {Nav, Navbar, Container, NavDropdown} from 'react-bootstrap';  
 
-function Navigation() {  
+function Navigation() {  //add navigation bar on header using Bootstrap 
   return (
     <div class="bg-secondary">
       <Navbar bg="" expand="md">
         <Container>
           <img class="me-2"alt="logo" src="logo.png" width="50px" />
-          <Navbar.Brand href="/Home">Intelligent Cart</Navbar.Brand>
+          <Navbar.Brand href="/">Intelligent Cart</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
