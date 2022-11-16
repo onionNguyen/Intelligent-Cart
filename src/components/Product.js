@@ -27,7 +27,6 @@ const Product = (props) => { //create constant Product
           <h1 class="col p-3">Product list</h1>
         </div>
       </React.Fragment>
-      <Footer />
       </div>
     );
   };
