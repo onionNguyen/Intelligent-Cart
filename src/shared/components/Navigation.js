@@ -7,7 +7,7 @@ function Navigation() {  //add navigation bar on header using Bootstrap
       <Navbar bg="" expand="md">
         <Container>
           <img class="me-2"alt="logo" src="logo.png" width="50px" />
-          <Navbar.Brand href="/Home">Intelligent Cart</Navbar.Brand>
+          <Navbar.Brand href="/">Intelligent Cart</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">

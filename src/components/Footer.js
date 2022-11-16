@@ -16,7 +16,7 @@ const Footer = () => ( //create constant Footer
 
             <hr className="clearfix w-100 d-md-none pb-0" />
 
-            <div className="col-md mb-">
+            <div className="col-md mb-3">
               <span>
                 <img class="p-3" src="./Facebook Icon.png" alt="Facebook Icon" />
                 <img class="p-3" src="./GitHub Icon.png" alt="GitHub Icon" />
