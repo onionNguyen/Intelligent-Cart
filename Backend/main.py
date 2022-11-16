@@ -89,7 +89,6 @@ class Neural_Network:
         self.build_network()
         self.learning_rate = learning_rate
         self.square_error_sum = 0
-        self.train_network(iterations, learning_rate)
         self.output_h = 0
 
     # Creates the neural net by instantiating nodes and adding weighted connections
@@ -221,8 +220,18 @@ if __name__ == '__main__':
     # ENSURE NUM ITERATIONS IS GREATER THAN ONE
     if(NUM_ITERATIONS < 2):
         sys.exit("Ensure that num iterations is greater than one.")
-
     
+    # GET ARRAY OF TUPLES
     training_set = build_data_Set(TRAINING_DAT_FILE)
+    # GET ARRAY OF TUPLES
     test_set = build_data_Set(TESTING_DAT_FILE)
-    Neural_Network(training_set, test_set, NUM_LAYERS, NUM_NODES_HIDDEN, LEARNING_RATE, NUM_ITERATIONS)
+    
+    # DEFINE OUR NEURAL NETWORK OBJECT
+    NN = Neural_Network(training_set, test_set, NUM_LAYERS, NUM_NODES_HIDDEN, LEARNING_RATE, NUM_ITERATIONS)
+
+    # TRAIN THE NEURAL NETWORK
+    NN.train_network(NUM_ITERATIONS, LEARNING_RATE)
+
+    # CREATE SAMPLE TEST CASES
+
+    # PREDICT
