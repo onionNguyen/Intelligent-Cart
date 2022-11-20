@@ -13,7 +13,7 @@ const WishList = () =>{
        return(
          <div>
            <div className="text-center">
-             <btn class="btn btn-warning mx-auto" onClick={logoutHandler}>
+             <btn className="btn btn-warning mx-auto" onClick={logoutHandler}>
                Logout
              </btn>
            </div>
