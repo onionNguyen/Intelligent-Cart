@@ -8,7 +8,6 @@ const Profile = () => {  //create constant Product, add different Route
     return (
       <div>
         <Navigation />
-        <Footer/>
       </div>
     );
   };

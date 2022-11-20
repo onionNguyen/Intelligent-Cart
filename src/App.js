@@ -13,7 +13,7 @@ const App = () => {
       <Route path="/Product" element={<Product WithHeader ={true} />} />
       <Route path="/Navbar" element={<Navbar />} />
       <Route path="/WishList" element={<h1>tobe implemented</h1>} />
-      <Route path="*" element={<a>Page Not Found</a>} />
+      {/* <Route path="*" element={<a>Page Not Found</a>} /> */}
     </Routes>
         
 
