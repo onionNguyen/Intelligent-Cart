@@ -11,7 +11,6 @@ const Home = () => {  //create constant Home, add different Route
       <Navigation />
       <Carousel />
       <Product />
-      <Footer/>
     </div>
   );
 };
