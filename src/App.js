@@ -9,6 +9,8 @@ import WishList from "./pages/WishList";
 import PublicRoute from "./routes/PublicRoute";
 import PrivateRoute from "./routes/PrivateRoute";
 
+
+
 const App = () => {
   return (
     <Routes>
@@ -27,8 +29,7 @@ const App = () => {
         path="/WishList"
         element={
           <PrivateRoute>
-            {" "}
-            <WishList />{" "}
+            <WishList />
           </PrivateRoute>
         }
       />
@@ -36,5 +37,7 @@ const App = () => {
     </Routes>
   );
 };
-
 export default App;
+
+
+

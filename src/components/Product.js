@@ -1,11 +1,9 @@
 import React from "react";
-import { getUser, resetUserSession } from "../service/AuthService.js";
 import Navigation from "../shared/components/Navigation.js";
 
 const Product = (props) => { //create constant Product
 
-    const user = getUser();
-    const name = user!== 'undefined' && user ? user.name: '';
+
 
 
     const {WithHeader} = props
