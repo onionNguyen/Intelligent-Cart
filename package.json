@@ -15,7 +15,9 @@
     "cdbreact": "^1.5.3",
     "gh-pages": "^4.0.0",
     "react": "^18.2.0",
+    "react-awesome-button": "^7.0.4",
     "react-bootstrap": "^2.5.0",
+    "react-modal": "^3.16.1",
     "react-router-dom": "^6.4.3",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"

@@ -29,6 +29,7 @@ async function register(userInfo) {
 
   const encryptedPW = bcrypt.hashSync(password.trim(), 10);
   
+  
   const user = {
     name: name,
     email: email,
