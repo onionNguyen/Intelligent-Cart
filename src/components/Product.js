@@ -1,9 +1,13 @@
 import React from "react";
-import Footer from "../components/Footer.js"
+import { getUser, resetUserSession } from "../service/AuthService.js";
 import Navigation from "../shared/components/Navigation.js";
 import Product_data from "../components/Product_data.json";
 
 const Product = (props) => { //create constant Product
+
+    const user = getUser();
+    const name = user!== 'undefined' && user ? user.name: '';
+
 
     const {WithHeader} = props
 
