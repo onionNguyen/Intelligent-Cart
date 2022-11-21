@@ -5,34 +5,6 @@ import sys
 import json
 
 # Takes the data from a file and returns it as array of tuples
-def build_data_set(file_location):
-    examples = []
-    file = open(file_location)
-    lines = file.readlines()
-    file.close()
-    lines.pop(0)
-    for line in lines:
-        split_line = line.split('\t')
-        example = []
-        for character in split_line:
-            if character != "0\n" and character != "1\n":
-                example.append(float(character))
-            else:
-                last_char = 1 if split_line[-1][0] == '1' else 0
-                example.append(last_char)
-        examples.append(example)
-    return examples
-
-
-def build_data_set_pandas(file_location):
-    data = pd.read_csv(file_location,
-                                sep="\t",
-                                usecols=['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8',	'A9', 'A10', 'A11', 'A12', 'A13', 'class'],
-                                header=0)
-
-    return data.values.tolist()
-
-
 def build_data_set_json(file_location):
     data = pd.read_json(file_location)
     data = data.drop(columns={"id", "product_name", "description", "currency", "thumb"})
@@ -41,9 +13,9 @@ def build_data_set_json(file_location):
     training_data = data.iloc[:cut]
     testing_data = data.iloc[cut:len(data)]
 
-    return data, training_data.values.tolist(), testing_data.values.tolist()
+    return training_data.values.tolist(), testing_data.values.tolist()
 
-
+# Add New data to File
 def add_data_to_json(file_location, id, product_name, description, price, currency, thumb, Department, Rating, Categories, Brand, Class):
     old_data = pd.read_json(file_location)
 
@@ -61,7 +33,7 @@ def add_data_to_json(file_location, id, product_name, description, price, curren
     with open(file_location, "w") as outfile:
         outfile.write(file)
 
-
+# Update Class data to File
 def update_data_in_json(file_location, index, class_val=1):
 
     data = pd.read_json(file_location)
@@ -174,7 +146,8 @@ class Neural_Network:
                 self.back_propagation(example, learning_rate)
                 print()
                 print("At iteration " + str(x) + ":")
-                print("Forward pass output:", str.format("{:.4f}", round(self.nn[-1][0].output, 4)))
+                print("Forward pass output:", str.format("{:.4f}", round(self.nn[-1][0].output, 4)), "\nClassified as:", round(self.nn[-1][0].output))
+                print("Item Values:", example)
                 for example in self.training_set:
                     sum_of_square += self.forward_pass(example)
                 print("Average squared error on training set (" + str(len(self.training_set)) + " instances):",
@@ -259,11 +232,10 @@ class Neural_Network:
 if __name__ == '__main__':
     json_file = "Product_data.json"
 
-    json_data, training_set, test_set = build_data_set_json(sys.argv[1])
+    training_set, test_set = build_data_set_json(json_file)
 
-    update_data_in_json(json_file, 1, 1)
-
-    # nn = Neural_Network(training_set, test_set, 2, 4, .9, 1000))
+    # Trains and test the neural network
+    nn = Neural_Network(training_set, test_set, 2, 8, .9, 1000)
 
 
 
