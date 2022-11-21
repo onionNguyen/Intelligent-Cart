@@ -57,6 +57,12 @@ const ProductItem =(props)=>{
           </div>
           <div classname="text-center">
             <AwesomeButton onPress={closeProductHandler} type="danger">
+              Add to Wishlist
+            </AwesomeButton>
+            <br />
+            <br />
+
+            <AwesomeButton onPress={closeProductHandler} type="danger">
               close
             </AwesomeButton>
           </div>
