@@ -1,7 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';  
 import {Nav, Navbar, Container, NavDropdown} from 'react-bootstrap';
 
-
 function Navigation() {  //add navigation bar on header using Bootstrap 
   return (
     <div className="bg-secondary">
@@ -19,10 +18,7 @@ function Navigation() {  //add navigation bar on header using Bootstrap
             </Nav>
           </Navbar.Collapse>
         </Container>
-        <form className="d-flex">
-        <input className="form-control me-2" type="text" placeholder="Search..."/>
-        <button className="btn btn-primary" type="button">Search</button>
-      </form>
+
       </Navbar>
     </div>
   );  
