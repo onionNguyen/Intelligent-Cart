@@ -13,7 +13,7 @@ function Navigation() {  //add navigation bar on header using Bootstrap
             <Nav className="me-auto">
               <Nav.Link href="/Auth">Login/Register</Nav.Link>
               <Nav.Link href="/Product">Product</Nav.Link>
-              <Nav.Link href="/Navbar">Search</Nav.Link>
+              <Nav.Link href="/SearchPage">Search</Nav.Link>
               <Nav.Link href="/WishList">Wishlist</Nav.Link>
             </Nav>
           </Navbar.Collapse>

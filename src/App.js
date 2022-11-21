@@ -8,6 +8,7 @@ import Auth from "./pages/Auth";
 import WishList from "./pages/WishList";
 import PublicRoute from "./routes/PublicRoute";
 import PrivateRoute from "./routes/PrivateRoute";
+import SearchPage from "./pages/SearchPage";
 
 
 const App = () => {
@@ -24,12 +25,12 @@ const App = () => {
       <Route path="/" element={<Home />} />
       <Route path="/Product" element={<Product WithHeader={true} />} />
       <Route path="/Navbar" element={<Navbar />} />
+      <Route path="/SearchPage" element={<SearchPage />} />
       <Route
         path="/WishList"
         element={
           <PrivateRoute>
-            {" "}
-            <WishList />{" "}
+            <WishList />
           </PrivateRoute>
         }
       />

@@ -3,17 +3,19 @@ import Product_data from './Product_data.json';
 import "./Search.css";
 import ProductItem from "./ProductItem";
 var data = require("./Product_data.json");
-export default function Search() {
+export default function Search(props) {
   const [value, setValue] = useState("");
 
+
   const onChange = (event) => {
+    props.name(event.target.value);
     setValue(event.target.value);
   };
 
   const onSearch = (searchTerm) => {
     setValue(searchTerm);
+    props.name(searchTerm);
     // our api to fetch the search result
-    console.log("search ", searchTerm);
   };
 
   return (
@@ -35,8 +37,6 @@ export default function Search() {
                 searchTerm &&
                 product_name.startsWith(searchTerm) &&
                 product_name !== searchTerm
-                
-
               );
             })
             .slice(0, 10)

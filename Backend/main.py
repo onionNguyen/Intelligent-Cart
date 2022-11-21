@@ -1,9 +1,23 @@
+import numpy as np
+import pandas as pd
 import math
 import sys
+import json
+
+from flask import Flask
+
+app = Flask(__name__)
+
+# member API route
+@app.route("/members")
+def members():
+    training_set, test_set = build_data_set_json(sys.argv[1])
+    nn = Neural_Network(training_set, test_set, int(sys.argv[2]), int(sys.argv[3]), float(sys.argv[4]), int(sys.argv[5]))
+    return nn
 
 
 # Takes the data from a file and returns it as array of tuples
-def build_data_Set(file_location):
+def build_data_set(file_location):
     examples = []
     file = open(file_location)
     lines = file.readlines()
@@ -20,6 +34,59 @@ def build_data_Set(file_location):
                 example.append(last_char)
         examples.append(example)
     return examples
+
+
+def build_data_set_pandas(file_location):
+    data = pd.read_csv(file_location,
+                                sep="\t",
+                                usecols=['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8',	'A9', 'A10', 'A11', 'A12', 'A13', 'class'],
+                                header=0)
+
+    return data.values.tolist()
+
+
+def build_data_set_json(file_location):
+    data = pd.read_json(file_location)
+    data = data.drop(columns={"id", "product_name", "description", "currency", "thumb"})
+
+    cut = int(len(data) * .8)
+    training_data = data.iloc[:cut]
+    testing_data = data.iloc[cut:len(data)]
+
+    return data, training_data.values.tolist(), testing_data.values.tolist()
+
+
+def add_data_to_json(file_location, id, product_name, description, price, currency, thumb, Department, Rating, Categories, Brand, Class):
+    old_data = pd.read_json(file_location)
+
+    data = pd.DataFrame(
+        [[id, product_name, description, price, currency, thumb, Department, Rating, Categories, Brand, Class]],
+        columns=["id", "product_name", "description", "price", "currency", "thumb", "Department", "Rating", "Categories", "Brand", "Class"],
+    )
+
+    data = pd.concat([old_data, data])
+
+    result = data.to_json(orient="records")
+    parsed = json.loads(result)
+    file = json.dumps(parsed, indent=4)
+
+    with open(file_location, "w") as outfile:
+        outfile.write(file)
+
+
+def update_data_in_json(file_location, index, class_val=1):
+
+    data = pd.read_json(file_location)
+    if index == 0:
+        index = 1
+    data._set_value(index-1, "Class", class_val)
+
+    result = data.to_json(orient="records")
+    parsed = json.loads(result)
+    file = json.dumps(parsed, indent=4)
+
+    with open(file_location, "w") as outfile:
+        outfile.write(file)
 
 
 # Node with all the characteristics needed for forward and back propigation
@@ -79,16 +146,18 @@ def dot_product(vector1, vector2):
 
 # Neural Net Class (Contains all variable and functions for the neural net)
 class Neural_Network:
-    def __init__(self, training_set, test_set, num_layers, num_units, learning_rate, iterations):
+    def __init__(self, training_set, test_set, num_layers, num_units, learning_rate, iterations, weights=[]):
         self.num_layers = num_layers
         self.num_units = num_units
         self.nn = []
         self.outputs = []
+        self.weights = weights
         self.training_set = training_set
         self.test_set = test_set
         self.build_network()
         self.learning_rate = learning_rate
         self.square_error_sum = 0
+        self.train_network(iterations, learning_rate)
         self.output_h = 0
 
     # Creates the neural net by instantiating nodes and adding weighted connections
@@ -129,13 +198,14 @@ class Neural_Network:
                       str.format("{:.4f}", round(sum_of_square / len(self.test_set), 4)))
                 x += 1
             self.square_error_sum = 0
-        nn_weights = []
+        nn_weights = self.weights
         for lay in self.nn:
             lay_weights = []
             for node in lay:
                 lay_weights.append(node.weights)
             nn_weights.append(lay_weights)
-        print(nn_weights)
+
+        self.weights = nn_weights
 
     # Takes a data tuple an sends it though the neural net
     def forward_pass(self, example):
@@ -189,7 +259,7 @@ class Neural_Network:
 # Runs the neural net
 # The ouptut to the console will show # iterations selected
 # The iterations where kept to just one tuple in the training set for debugging (this can be changed later)
-# The error on training and test set should drop on averge however up ticks at point are expected as the neural net is
+# The error on traing and test set should drop on averge however up ticks at point are expected as the neural net is
 # not fully optimized
 # System Arguments:
 #   1) training set file location (.dat)
@@ -198,40 +268,14 @@ class Neural_Network:
 #   4) Num of nodes in hidden layers
 #   5) Learning rate (0-1)
 #   6) Iterations
-# Example System Arguments:
-#   1) test.dat
-#   2) train.dat
-#   3) (0-2)
-#   4) 2
-#   5) (0-1)
-#   6) Iterations
 if __name__ == '__main__':
-    if len(sys.argv) < 7:
-        sys.exit("[Usage] python3 main.py <training_dat_file> <testing_dat_file> <num_layers> <num_nodes_hidden> <learning_rate> <num_iterations>") 
+    json_data, training_set, test_set = build_data_set_json(sys.argv[1])
 
-    # SET INITIAL VARIABES FROM COMMAND LINE
-    TRAINING_DAT_FILE = sys.argv[1]
-    TESTING_DAT_FILE = sys.argv[2]
-    NUM_LAYERS = int(sys.argv[3])
-    NUM_NODES_HIDDEN = int(sys.argv[4])
-    LEARNING_RATE = float(sys.argv[5])
-    NUM_ITERATIONS = int(sys.argv[6])
+    update_data_in_json(sys.argv[1], 1, 0)
 
-    # ENSURE NUM ITERATIONS IS GREATER THAN ONE
-    if(NUM_ITERATIONS < 2):
-        sys.exit("Ensure that num iterations is greater than one.")
-    
-    # GET ARRAY OF TUPLES
-    training_set = build_data_Set(TRAINING_DAT_FILE)
-    # GET ARRAY OF TUPLES
-    test_set = build_data_Set(TESTING_DAT_FILE)
-    
-    # DEFINE OUR NEURAL NETWORK OBJECT
-    NN = Neural_Network(training_set, test_set, NUM_LAYERS, NUM_NODES_HIDDEN, LEARNING_RATE, NUM_ITERATIONS)
+    # nn = Neural_Network(training_set, test_set, int(sys.argv[2]), int(sys.argv[3]), float(sys.argv[4]), int(sys.argv[5]))
 
-    # TRAIN THE NEURAL NETWORK
-    NN.train_network(NUM_ITERATIONS, LEARNING_RATE)
+    # covert_data_to_json(sys.argv[1], 61, "Test Product", "Testing", 2130, "$", "n/a", "n/a", "n/a", "n/a", "n/a", 0)
 
-    # CREATE SAMPLE TEST CASES
 
-    # PREDICT
+

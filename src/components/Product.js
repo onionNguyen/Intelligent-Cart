@@ -13,7 +13,6 @@ const Product = (props) => { //create constant Product
       //basic layout. For project 5 will have actual products displayed
     <div>
       {WithHeader && <Navigation />}
-      <Search />
       <ProductList items = {ProductData}/>
     </div>
     );
