@@ -4,18 +4,6 @@ import math
 import sys
 import json
 
-from flask import Flask
-
-app = Flask(__name__)
-
-# member API route
-@app.route("/members")
-def members():
-    training_set, test_set = build_data_set_json(sys.argv[1])
-    nn = Neural_Network(training_set, test_set, int(sys.argv[2]), int(sys.argv[3]), float(sys.argv[4]), int(sys.argv[5]))
-    return nn
-
-
 # Takes the data from a file and returns it as array of tuples
 def build_data_set(file_location):
     examples = []
@@ -269,13 +257,13 @@ class Neural_Network:
 #   5) Learning rate (0-1)
 #   6) Iterations
 if __name__ == '__main__':
+    json_file = "Product_data.json"
+
     json_data, training_set, test_set = build_data_set_json(sys.argv[1])
 
-    update_data_in_json(sys.argv[1], 1, 0)
+    update_data_in_json(json_file, 1, 1)
 
-    # nn = Neural_Network(training_set, test_set, int(sys.argv[2]), int(sys.argv[3]), float(sys.argv[4]), int(sys.argv[5]))
-
-    # covert_data_to_json(sys.argv[1], 61, "Test Product", "Testing", 2130, "$", "n/a", "n/a", "n/a", "n/a", "n/a", 0)
+    # nn = Neural_Network(training_set, test_set, 2, 4, .9, 1000))
 
 
 

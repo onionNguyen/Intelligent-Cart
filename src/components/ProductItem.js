@@ -7,6 +7,14 @@ import "react-awesome-button/dist/styles.css";
 import Modal from "react-modal";
 import Rating from "@mui/material/Rating";
 
+// const pythonExec =() =>{
+//   const python_code = `print("Hello World")`
+
+//   const pyodide = window.pyodide;
+
+//   pyodide.runPython(python_code);
+// }
+
 
 
 const customStyles = {
@@ -29,6 +37,11 @@ const ProductItem =(props)=>{
 
       const closeProductHandler = () => setShowProduct(false);
 
+      const addWishList = () =>{
+        console.log('6969');
+
+        closeProductHandler();
+      }
       function afterOpenModal() {
         // references are now sync'd and can be accessed.
         subtitle.style.color = "#f00";
