@@ -7,7 +7,8 @@ import Search from "./Search";
 const Product = (props) => { //create constant Product
 
     const {WithHeader} = props
-
+      const loadedProducts = ProductData.filter(product=> product.Class === '1'); 
+      
     return (
       //basic layout. For project 5 will have actual products displayed
     <div>

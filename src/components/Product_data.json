@@ -10,6 +10,7 @@
         "Rating": "4.3",
         "Categories": "1",
         "Brand": "2",
+        "Interest":"0",
         "Class": "0"
     },
     {
@@ -23,6 +24,7 @@
         "Rating": "4.1",
         "Categories":"1",
         "Brand": "2",
+        "Interest":"0",
         "Class": "0"
     },
     {
@@ -36,6 +38,7 @@
         "Rating": "4.1",
         "Categories": "1",
         "Brand": "2",
+        "Interest":"0",
         "Class": "0"
     },
     {
@@ -49,6 +52,7 @@
         "Rating": "4.3",
         "Categories": "1",
         "Brand": "2",
+        "Interest":"0",
         "Class": "0"
     },
     {
@@ -62,6 +66,7 @@
         "Rating": "3.5",
         "Categories": "1",
         "Brand": "2",
+        "Interest":"0",
         "Class": "0"
     },
     {
@@ -75,6 +80,7 @@
         "Rating": "4.3",
         "Categories": "1",
         "Brand": "2",
+        "Interest":"0",
         "Class": "0"
     },
     {
@@ -88,6 +94,7 @@
         "Rating": "4.4",
         "Categories": "1",
         "Brand": "2",
+        "Interest":"0",
         "Class": "0"
     },
     {
@@ -101,6 +108,7 @@
         "Rating": "4.5",
         "Categories": "1",
         "Brand": "2",
+        "Interest":"0",
         "Class": "0"
     },
     {
@@ -114,6 +122,7 @@
         "Rating": "4.2",
         "Categories": "1",
         "Brand": "2",
+        "Interest":"0",
         "Class": "0"
     },
     {
@@ -127,6 +136,7 @@
         "Rating": "4.4",
         "Categories": "1",
         "Brand": "1",
+        "Interest":"0",
         "Class": "0"
     },
     {
@@ -140,6 +150,7 @@
         "Rating": "4.5",
         "Categories": "1",
         "Brand": "1",
+        "Interest":"0",
         "Class": "0"
     },
     {
@@ -153,6 +164,7 @@
         "Rating": "4.4",
         "Categories": "1",
         "Brand": "1",
+        "Interest":"0",
         "Class": "0"
     },
     {
@@ -166,6 +178,7 @@
         "Rating": "3.5",
         "Categories": "1",
         "Brand": "3",
+        "Interest":"0",
         "Class": "0"
     },
     {
@@ -179,6 +192,7 @@
         "Rating": "4.6",
         "Categories": "2",
         "Brand": "4",
+        "Interest":"0",
         "Class": "1"
     },
     {
@@ -192,6 +206,7 @@
         "Rating": "4.5",
         "Categories": "2",
         "Brand": "4",
+        "Interest":"0",
         "Class": "1"
     },
     {
@@ -205,6 +220,7 @@
         "Rating": "4.7",
         "Categories": "2",
         "Brand": "4",
+        "Interest":"0",
         "Class": "1"
     },
     {
@@ -218,6 +234,7 @@
         "Rating": "4.2",
         "Categories": "2",
         "Brand": "4",
+        "Interest":"0",
         "Class": "1"
     },
     {
@@ -231,6 +248,7 @@
         "Rating": "4.0",
         "Categories": "2",
         "Brand": "4",
+        "Interest":"0",
         "Class": "1"
     },
     {
@@ -244,6 +262,7 @@
         "Rating": "5.0",
         "Categories": "1",
         "Brand": "5",
+        "Interest":"0",
         "Class": "1"
     },
     {
@@ -257,6 +276,7 @@
         "Rating": "4.7",
         "Categories": "2",
         "Brand": "5",
+        "Interest":"0",
         "Class": "1"
     },
     {
@@ -270,6 +290,7 @@
         "Rating": "4.6",
         "Categories": "2",
         "Brand": "5",
+        "Interest":"0",
         "Class": "1"
     },
     {
@@ -283,6 +304,7 @@
         "Rating": "4.4",
         "Categories": "3",
         "Brand": "6",
+        "Interest":"0",
         "Class": "0"
     },
     {
@@ -296,6 +318,7 @@
         "Rating": "4.2",
         "Categories": "3",
         "Brand": "7",
+        "Interest":"0",
         "Class": "1"
     },
     {
@@ -309,6 +332,7 @@
         "Rating": "4.4",
         "Categories": "3",
         "Brand": "5",
+        "Interest":"0",
         "Class": "0"
     },
     {
@@ -322,6 +346,7 @@
         "Rating": "4.6",
         "Categories": "3",
         "Brand": "5",
+        "Interest":"0",
         "Class": "0"
     },
     {
@@ -335,6 +360,7 @@
         "Rating": "4.7",
         "Categories": "1",
         "Brand": "8",
+        "Interest":"0",
         "Class": "1"
     },
     {
@@ -348,6 +374,7 @@
         "Rating": "4.7",
         "Categories": "2",
         "Brand": "9",
+        "Interest":"0",
         "Class": "0"
     },
     {
@@ -361,6 +388,7 @@
         "Rating": "4.5",
         "Categories": "2",
         "Brand": "9",
+        "Interest":"0",
         "Class": "0"
     },
     {
@@ -374,6 +402,7 @@
         "Rating": "4.6",
         "Categories": "3",
         "Brand": "10",
+        "Interest":"0",
         "Class": "0"
     },
     {
@@ -387,6 +416,7 @@
         "Rating": "4.9",
         "Categories": "3",
         "Brand": "10",
+        "Interest":"0",
         "Class": "0"
     },
     {
@@ -400,6 +430,7 @@
         "Rating": "4.7",
         "Categories": "3",
         "Brand": "10",
+        "Interest":"0",
         "Class": "0"
     },
     {
@@ -413,6 +444,7 @@
         "Rating": "4.4",
         "Categories": "1",
         "Brand": "8",
+        "Interest":"0",
         "Class": "0"
     },
     {
@@ -426,6 +458,7 @@
         "Rating": "4.7",
         "Categories": "3",
         "Brand": "10",
+        "Interest":"0",
         "Class": "0"
     },
     {
@@ -439,6 +472,7 @@
         "Rating": "4.7",
         "Categories": "3",
         "Brand": "10",
+        "Interest":"0",
         "Class": "0"
     },
     {
@@ -452,6 +486,7 @@
         "Rating": "4.9",
         "Categories": "1",
         "Brand": "8",
+        "Interest":"0",
         "Class": "1"
     },
     {
@@ -465,6 +500,7 @@
         "Rating": "4.5",
         "Categories": "3",
         "Brand": "10",
+        "Interest":"0",
         "Class": "1"
     },
     {
@@ -478,6 +514,7 @@
         "Rating": "4.6",
         "Categories": "2",
         "Brand": "9",
+        "Interest":"0",
         "Class": "0"
     },
     {
@@ -491,6 +528,7 @@
         "Rating": "4.5",
         "Categories": "3",
         "Brand": "10",
+        "Interest":"0",
         "Class": "0"
     },
     {
@@ -504,6 +542,7 @@
         "Rating": "4.6",
         "Categories": "2",
         "Brand": "12",
+        "Interest":"0",
         "Class": "0"
     },
     {
@@ -517,6 +556,7 @@
         "Rating": "4.5",
         "Categories": "2",
         "Brand": "13",
+        "Interest":"0",
         "Class": "0"
     },
     {
@@ -530,6 +570,7 @@
         "Rating": "4.6",
         "Categories": "2",
         "Brand": "2",
+        "Interest":"0",
         "Class": "0"
     },
     {
@@ -543,6 +584,7 @@
         "Rating": "4.5",
         "Categories": "2",
         "Brand": "14",
+        "Interest":"0",
         "Class": "0"
     },
     {
@@ -556,6 +598,7 @@
         "Rating": "4.2",
         "Categories": "2",
         "Brand": "14",
+        "Interest":"0",
         "Class": "0"
     },
     {
@@ -569,6 +612,7 @@
         "Rating": "4.2",
         "Categories": "2",
         "Brand": "14",
+        "Interest":"0",
         "Class": "0"
     },
     {
@@ -582,6 +626,7 @@
         "Rating": "3.6",
         "Categories": "2",
         "Brand": "14",
+        "Interest":"0",
         "Class": "0"
     },
     {
@@ -595,6 +640,7 @@
         "Rating": "4.7",
         "Categories": "2",
         "Brand": "14",
+        "Interest":"0",
         "Class": "0"
     },
     {
@@ -608,6 +654,7 @@
         "Rating": "4.4",
         "Categories": "2",
         "Brand": "14",
+        "Interest":"0",
         "Class": "0"
     },
     {
@@ -621,6 +668,7 @@
         "Rating": "4.8",
         "Categories": "2",
         "Brand": "14",
+        "Interest":"0",
         "Class": "0"
     },
     {
@@ -634,6 +682,7 @@
         "Rating": "4.0",
         "Categories": "2",
         "Brand": "14",
+        "Interest":"0",
         "Class": "1"
     },
     {
@@ -647,6 +696,7 @@
         "Rating": "4.3",
         "Categories": "2",
         "Brand": "14",
+        "Interest":"0",
         "Class": "0"
     },
     {
@@ -660,6 +710,7 @@
         "Rating": "4.4",
         "Categories": "1",
         "Brand": "13",
+        "Interest":"0",
         "Class": "0"
     },
     {
@@ -673,6 +724,7 @@
         "Rating": "3.9",
         "Categories": "1",
         "Brand": "13",
+        "Interest":"0",
         "Class": "0"
     },
     {
@@ -686,6 +738,7 @@
         "Rating": "4.5",
         "Categories": "4",
         "Brand": "5",
+        "Interest":"0",
         "Class": "0"
     },
     {
@@ -699,6 +752,7 @@
         "Rating": "4.6",
         "Categories": "4",
         "Brand": "5",
+        "Interest":"0",
         "Class": "0"
     },
     {
@@ -712,6 +766,7 @@
         "Rating": "4.7",
         "Categories": "4",
         "Brand": "5",
+        "Interest":"0",
         "Class": "0"
     },
     {
@@ -725,6 +780,7 @@
         "Rating": "4.7",
         "Categories": "4",
         "Brand": "15",
+        "Interest":"0",
         "Class": "0"
     },
     {
@@ -738,6 +794,7 @@
         "Rating": "4.6",
         "Categories": "4",
         "Brand": "15",
+        "Interest":"0",
         "Class": "0"
     },
     {
@@ -751,6 +808,7 @@
         "Rating": "4.7",
         "Categories": "1",
         "Brand": "15",
+        "Interest":"0",
         "Class": "0"
     },
     {
@@ -764,6 +822,7 @@
         "Rating": "4.6",
         "Categories": "1",
         "Brand": "15",
+        "Interest":"0",
         "Class": "0"
     },
     {
@@ -777,6 +836,7 @@
         "Rating": "4.5",
         "Categories": "1",
         "Brand": "15",
+        "Interest":"0",
         "Class": "0"
     }
 ]
